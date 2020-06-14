@@ -1,0 +1,65 @@
+
+@keyframes picturechange {
+
+    from { 
+        background-image: url(bed.jpg);
+    }
+
+    20% {
+         background-image: url(retired.jpg);
+        }
+
+    40% { 
+        background-image: url(spices.jpg);
+    }
+    60% {
+        background-image: url(family.jpg);
+    }
+
+    80% {
+        background-image: url(chinesefood.jpg);
+    }
+    to {
+        background-image: url(bed.jpg);
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.container {
+    display: grid;
+    background-size: cover;
+    /* reverse both running */
+    animation-delay: -1s;
+    animation: 15s ease-in 7s infinite picturechange;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.container > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container > ul > li:first-child {
+    flex-grow: 2;
+}
+
+li {
+    margin: 10px;
+    list-style: none;
+    font-size: 3rem;
+    color: silver;
+}
+
+input {
+    font-size: 3rem;
+    border-radius: 5px;
+    color: red;
+}
