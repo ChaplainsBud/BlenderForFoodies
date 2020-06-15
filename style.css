@@ -29,7 +29,6 @@
     margin: 0;
 }
 
-
 .container {
     display: grid;
     background-size: cover;
@@ -41,13 +40,19 @@
     width: 100%;
 }
 
-.container > ul {
+/* hack, how to optimize? */
+header {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+header > ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.container > ul > li:first-child {
+header > ul > li:first-child {
     flex-grow: 2;
 }
 
@@ -59,7 +64,79 @@ li {
 }
 
 input {
-    font-size: 3rem;
+    font-size: 1rem;
     border-radius: 5px;
     color: red;
+    padding: 5px;
+    position: relative;
+    bottom: 10px;
+}
+
+input:hover {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.lang {
+    visibility: hidden;
+    background-color: orange;
+}
+
+.categories {
+    visibility: hidden;
+    background-color: orange;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.categories > ul > li:first-child {
+    font-size: inherit;
+}
+
+.categories > ul {
+  
+    color: black; 
+}
+
+.categories > ul > li {
+    color: black;
+    font-size: .75rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.call-to-action {
+    visibility: hidden;
+    background-color: orange;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-top: 2px solid silver;
+}
+
+.get-app > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.stay-social > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.cookie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
